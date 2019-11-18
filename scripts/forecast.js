@@ -5,7 +5,7 @@ const getWeather = async(id)=>{
   const response = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${id}?apikey=${key}`);
   
   const data = await response.json();
-  return data;
+  return data[0];
 };
 
 // get city
@@ -18,14 +18,14 @@ const getCity = async(city)=>{
   return data[0];
 };
 
-getCity('manchester')
-.then(data=>{
-  console.log(data);
-  return getWeather('329260');
-})
-.then(data=>{
-  console.log(data);
-})
-.catch(err=>{
-  console.log(err);
-})
+// getCity('manchester')
+// .then(data=>{
+//   console.log(data);
+//   return getWeather('329260');
+// })
+// .then(data=>{
+//   console.log(data);
+// })
+// .catch(err=>{
+//   console.log(err);
+// })
