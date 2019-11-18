@@ -1,0 +1,1 @@
+WeatherCaster is a web-app build using ES6(and ES6+), Fetch, Bootstrap and AccuWeather API to get the weather information of given city.
